@@ -25,7 +25,7 @@ async function fetchNews() {
       </div>
     `;
     // Display remaining articles in a grid layout
-    for (let i = 1; i < data.articles.length; i++) {
+    for (let i = 1; i < 10; i++) {
       const article = data.articles[i];
       newsHtml += `
         <div class="col-md-4 mb-3">
