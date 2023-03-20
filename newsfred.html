@@ -13,6 +13,21 @@
     <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
     <link href="newsfred.css" rel="stylesheet">
     
+     <!-- stylesheet -->
+     <link href="mp2.css" rel="stylesheet">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+    <!-- javascript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+
+  <!-- jquery -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+
+
+
   </head> 
 
 <body>
@@ -53,67 +68,365 @@
     </div>
   </nav>
 
-  <!--News Content Card-->  
-  <div class="container">
-    <div class="row">
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
+ <!-- Masonry -->
+
+
+  <div class="fluid-container ">
+
+    <div id="heading">
+      <h1 class="my-4 offset-2"> Local News</h1>
     </div>
+    <div class="container pt-5 pb-md-5 pb-sm-3">
+      
+      <div class="row">
+        
+        <div class="row col-12 column-gap-2 justify-content-center">       
+          
+          
+          
+          <!-- news1 -->
+        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-5 card gap-4">
+          <div class="card-body">
+            <h4 class="card-header" id="title1">Title1</h4>
+            <p id="pubDate1" class="text-muted"></p>
+            <p class="card-text" id="text1">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          <div class="img-area">
+            <div>
+            <img src="" alt="${data[0].image}" id="pic1">
+            <p class="card-text"><small class="text-muted" id="link1">Last updated 3 mins ago</small></p>
+          </div>
+          </div>
+
+        </div>
+        <!-- /news1 -->
+
+
+        <!-- news2 -->
+        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-5 card">
+          <div class="card-body">
+            <h4 class="card-header" id="title2">Title2</h4>
+            <p id="pubDate2" class="text-muted"></p>
+            <p class="card-text" id="text2">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            </div>
+          <div class="img-area">
+            <div>
+            <img src="https://images.gmanews.tv/webpics/2023/03/320_Untitled_2023_03_17_21_49_29.jpg" alt="${data[1].image}" id="pic2">
+            <p class="card-text"><small class="text-muted" id="link2">Last updated 3 mins ago</small></p>
+          </div>
+        </div>
+
+        </div>
+        <!-- /news2 -->
+        </div>
+
+
+        <!-- advertisement -->
+        <div class="text-black text-center p-3 my-3 col-sm-12 col-md-12 col-lg-12">
+          <blockquote class="blockquote mb-0">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat.</p>
+            <footer class="blockquote-footer text-white">
+              <small>
+                Someone famous in <cite title="Source Title">Source Title</cite>
+              </small>
+            </footer>
+          </blockquote>
+        </div>
+        <!-- advertisement -->
+
+        <!-- news3 -->
+        <div class="card col-xs-8 col-xs-offset-2 col-sm-12 col-sm-offset-0 col-md-8 p-4">
+          <div class="img-area">
+            <div>
+            <img src="" alt="" id="pic3">
+            <p class="card-text"><small class="text-muted" id="link3">Last updated 3 mins ago</small></p>
+          </div>
+                <div class="col-md-5 offset-md-1 offset-1 col-sm-10">
+                  <h5 class="card-header" id="title3">Title 3</h5>
+                  <p id="pubDate3" class="text-muted"></p>
+                  <p class="card-text card-body" id="text3" >Some quick example text to build on the card title and make up the bulk of the card's content.</p>            
+                </div>
+            </div>
+        </div>
+        <!-- /news3 -->
+
+        <!-- advertisment -->
+        <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-4">
+          <div class="img-area">
+            <div>
+              <p class="card-text"><small class="text-muted">Advertisement</small></p>
+              <img src="Pictures\food4.png" alt="pic">  
+            </div>
+          </div>      
+        </div>
+       <!-- /advertisement -->
+
+
+        <!-- news4 -->
+        <div class="col-12 my-2">
+          <div class="row">
+            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6 ">
+              <div class="img-area exp-img">
+                <img src="" alt="" id="pic4">
+              </div>
+            </div>   
+
+            <div class="card col-md-6 my-3">
+              <div class="card-body">
+                <h5 class="card-header" id="title4">Title4</h5>
+                <p id="pubDate4" class="text-muted"></p>
+                  <p class="card-text" id="text4">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                  <p class="card-text"><small class="text-muted" id="link4">Last updated 3 mins ago</small></p>
+              </div>
+            </div>          
+        </div>
+       </div>
+        <!-- /news4 -->  
+      <!-- news5 -->
+        <div class="col-12">
+          <div class="row">
+
+            <div class="card col-md-6">
+              <div class="card-body">
+                <h5 class="card-header" id="title5">Title5</h5>
+                <p id="pubDate5" class="text-muted"></p>
+                  <p class="card-text" id="text5">This is another card with title and supporting text below. This card has some additional content to make it slightly taller overall.</p>
+                  <p class="card-text"><small class="text-muted" id="link5"></small></p>
+
+              </div>
+            </div>
+
+            <div class="col-xs-8 col-xs-offset-2 col-sm-6 col-sm-offset-0 col-md-6">
+              <div class="img-area exp-img">
+                <img src="" alt="" id="pic5">
+              </div>
+            </div>
+
+        </div>
       </div>
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+      <!-- /news5 --> 
+          </div>
+        </div>
       </div>
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+    
+<!-- masonry part 2 -->
+      <!-- International news -->
+    <div class="container-fluid bg-secondary pt-5 pb-md-5 pb-sm-3">
+
+      <div id="heading">
+        <h1 class="my-4 offset-2">International News</h1>
+        </div>
+    <div class="container">
+       
+      <!-- Card deck -->
+      <div class="card-deck row">
+        
+        <div class="col-xs-12 col-sm-6 col-md-4">
+        <!-- Card -->
+        <div class="card">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">1 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
+        </div>
+      
+        <div class="col-xs-12 col-sm-6 col-md-4">
+        <!-- Card -->
+        <div class="card mb-4">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">2 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
       </div>
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <!-- Card -->
+        <div class="card mb-4">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">3 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
       </div>
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <!-- Card -->
+        <div class="card">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/16.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">4 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
       </div>
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+       
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <!-- Card -->
+        <div class="card mb-4">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/14.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">5 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
       </div>
-      <div class="card my-4 mx-2" style="width: 18rem;">
-    <img src="..." class="card-img-top" alt="...">
-    <div class="card-body">
-      <h5 class="card-title">Card title</h5>
-      <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-      <a href="#" class="btn btn-primary">Go somewhere</a>
-    </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4">  
+        <!-- Card -->
+        <div class="card mb-4">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">6 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
+      </div>
+      
+      <div class="col-xs-12 col-sm-6 col-md-4">
+        <!-- Card -->
+        <div class="card mb-4">
+      
+          <!--Card image-->
+          <div class="view overlay">
+            <img class="card-img-top" src="https://mdbootstrap.com/img/Photos/Others/images/15.jpg" alt="Card image cap">
+            <a href="#!">
+              <div class="mask rgba-white-slight"></div>
+            </a>
+          </div>
+      
+          <!--Card content-->
+          <div class="card-body">
+      
+            <!--Title-->
+            <h4 class="card-title">7 Card title</h4>
+            <!--Text-->
+            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+            <!-- Provides extra visual weight and identifies the primary action in a set of buttons -->
+            <button type="button" class="btn btn-light-blue btn-md">Read more</button>
+      
+          </div>
+      
+        </div>
+        <!-- Card -->
+      </div>  
+      
+        
+      </div>
+      <!-- Card deck -->
+        
       </div>
     </div>
-</div>
+
+    <!-- Local News -->
+  <!-- Masonry -->
+
 <!--Footer Section-->
   <footer id="footer" class="footer">
     <div class="container">
@@ -190,5 +503,74 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 
 </body>
+
+<!-- Masonry JS -->
+  <script>
+
+const options = {
+	method: 'GET',
+	headers: {
+		'X-RapidAPI-Key': 'e54c904bfcmsh4821e39d1781448p150151jsn7bb86b450a3e',
+		'X-RapidAPI-Host': 'philippine-news.p.rapidapi.com'
+	}
+};
+
+fetch('https://philippine-news.p.rapidapi.com/latest?limit=5', options)
+	.then(response => response.json())
+	.then((data) => { console.log( data); 
+
+
+    $('#title1').text(data[0].title);
+    $('#title2').text(data[1].title);
+    $('#title3').text(data[2].title);
+    $('#title4').text(data[3].title);
+    $('#title5').text(data[4].title);
+
+    $('#text1').text(data[0].description);
+    $('#text2').text(data[1].description);
+    $('#text3').text(data[2].description);
+    $('#text4').text(data[3].description);
+    $('#text5').text(data[4].description);
+  
+    let pic1 = document.getElementById("pic1");
+    let pic2 = document.getElementById("pic2");
+    let pic3 = document.getElementById("pic3");
+    let pic4 = document.getElementById("pic4");
+    let pic5 = document.getElementById("pic5");
+
+    pic1.src = data[0].image;
+    pic2.src = data[1].image;
+    pic3.src = data[2].image;
+    pic4.src = data[3].image;
+    pic5.src = data[4].image;
+
+    $('#pubDate1').text(data[0].pubDate);
+    $('#pubDate2').text(data[1].pubDate);
+    $('#pubDate3').text(data[2].pubDate);
+    $('#pubDate4').text(data[3].pubDate);
+    $('#pubDate5').text(data[4].pubDate);
+
+    $('#link1').text(data[0].link);
+    $('#link2').text(data[1].link);
+    $('#link3').text(data[2].link);
+    $('#link4').text(data[3].link);
+    $('#link5').text(data[4].link);
+
+
+
+
+  } )
+	.catch(err => console.error(err));
+
+
+  
+  </script>
+<script>
+
+fetch('https://newsdata.io/api/1/news?apikey=pub_191063c99683cbe4a07ca33b9d76f48c57613&q=pegasus&language=en')
+	.then(response => response.json())
+	.then(response => console.log(response))
+	.catch(err => console.error(err));
+</script>
 
 </html>
