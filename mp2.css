@@ -9,93 +9,193 @@ body
 
 
 
-/*----ABOUT----*/
-.about-1 {
-  padding: 5px;
+#nav
+{
+  box-sizing: border-box;
+  background-color: #0E8388;
+  max-width: 100%;
+  height: 6rem;
+  max-height: 5rem;
+  text-align: center;
 }
-h1 {
+
+footer
+{
+  background-color: #0E8388;
+}
+nav ul li
+{
+padding: 5px;
+width: 100px;
+}
+
+#contactUs
+{
+  inline-size: min-content;
+}
+
+/* heading */
+#heading
+{
+  box-sizing: border-box;
+  background-color: #0E8388;
+  color:#CBE4DE
+}
+
+/* /heading */
+
+/* masonry */
+.container
+{
   margin-top: 50px;
 }
-.about-1 h1 {
-  text-align: center;
-  color: white;
-  font-weight: bold;
-}
-.about-1 p {
-  text-align: center ;
-  padding: 3px;
-  color: white;
-  margin-left: 60px;
-  margin-right: 60px;
-}
-.about-item {
-  margin-bottom: 20px;
-  margin-top: 20px;
-  background-color: white;
-  padding: 80px, 30px;
-  box-shadow: 0 0 9px rgba(0, 0, 0 .6);
-}
-.about-item i {
-  font-size: 40px;
-  margin: 0;
-}
-.about-item h3 {
-  font-size: 25px;
-  margin-bottom: 10px;
-}
-.about-item hr {
-  width: 45px;
-  height: 3px;
-  background-color: #0f1212;
-  margin: 0 auto;
-  border: none;
-}
-.about-item p {
-  margin-top: 20px;
-}
-.about-item:hover {
-  background-color: #032728;
+
+.img-area
+{
+  overflow: hidden;
+  position: relative;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  margin-bottom: 30px;
+  justify-content: center;
+  align-items: center;
 
 }
-.about-item:hover i,
-.about-item:hover h3,
-.about-item:hover p {
-  color:#eeecef;
-}
-.about-item:hover hr {
-  background-color: gold;
-}
-.about-item:hover i {
-  transform: translateY(20px) ;
-}
-.about-item:hover i,
-.about-item:hover h3,
-.about-item:hover hr{
-  transition: all 400ms ease-in-out;
 
-}
-.bi-globe,
-.bi-book-half,
-.bi-sunrise {
-  margin-top: 30px;
-}
-.images {
+.img-area img{
   width: 100%;
-  height: 100vh;
-  background-position: center;
-  background-size: cover;
-  background-image: url(file:///C:/Users/Jeffrey/Downloads/wetherrr.jfif);
-}#about-1 {
-  background-image: url('file:///C:/Users/Jeffrey/Downloads/wetherrr.jfif');
-
 }
-#about {
-  width: 100%;
-  height: 100vh;
-  background-image: url(images/over11.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  background-color: rgb(22, 253, 253);
+.exp-img
+{
+  height: 275px;
+}
+
+@media only screen and (max-width:1200px) {
   
+  .exp-img{
+    height: 222px;
+  }
+}
+
+@media only screen and (max-width:992px) {
+  .exp-img{
+    height: 100%;
+  }
+}
+
+/* masonry */
+
+.hero
+{
+ background-image: url(Pictures\heroimg.jpg);
+ background-size: cover;
+ background-repeat: no-repeat;
+ background-attachment: fixed;
+ background-position: center;
+ min-width: 50%;
+}
+
+nav a
+{
+  padding-top: 0.3125rem;
+  padding-bottom: 0.3125rem;
+  margin-right: 1rem;
+  font-size: 1.25rem;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+nav a:hover
+{
+  color: white;
+  transform: scale(1.05) ;
+-webkit-transform: scale(1.05) ;
+-moz-transform: scale(1.05) ;
+}
+
+
+nav ul
+{
+  list-style: none;
+  -webkit-tap-highlight-color: transparent;
+  text-align: center;
+  flex: 1;
+  float: right;
+}
+
+nav ul li
+  {
+    display: block;
+    margin-top: 5px;
+  }
+
+nav ul li a
+{
+  color: #CBE4DE;
+  -webkit-tap-highlight-color: transparent;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  
+  margin: 1%;
+}
+
+nav ul li a:hover
+
+{
+  color: white;
+  -webkit-tap-highlight-color: transparent;
+  transition: .5s;
+}
+
+/* font-color */
+.fc-p
+{
+  color: #e6a5adf1;
+}
+
+.fc-g
+{
+  color: grey;
+}
+.fc-beige
+{
+  color: beige;
+}
+.fc-b
+{
+  color: black;
+}
+.fc-purple
+{
+  color: #4e0764
+}
+.fc-purpleT
+{
+  color: #4e0764e4;
+}
+
+.fc-white
+{
+  color: white;
+}
+
+.fc-bluegreen
+{
+  color:#0E8388;
+}
+.fc-lbluegreen
+{
+  color: #CBE4DE;
+}
+/* /font-color */
+
+/* width */
+#contactus
+{
+  width: 150px;
 }
