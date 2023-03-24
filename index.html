@@ -1,84 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>News API</title>
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
-      rel="stylesheet"      
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
-      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-    <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link rel="stylesheet" href="css/style.css" />
-    <link rel="stylesheet" href="css/tech.css" />
-    
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cipher5 News | Weather | Sports | Lifestyle | Technology | Business</title>
+
+  <!--CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="newsfred.css" rel="stylesheet">
+
 </head>
+
 <body>
-    <!--Navbar-->
-    <nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-image: url('images/bg.png')">
-      <div class="container-fluid">
-        <a class="navbar-brand" href="#">
-          <img src="images/logociphercolor.png" width="75" height="75" class="d-inline-block align-top" alt="Bootstrap" loading="lazy">
-        </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="ms-5 text-warning" id="weather-info"></div> <!-- add new HTML element for weather info -->
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-              <a class="nav-link active" aria-current="page" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="weather.html" id="weather-link">Weather</a>
-            </li>          
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li> 
-          </ul>
-          <form class="d-flex" role="search">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success" type="submit">Search</button>
-          </form>
-        </div>
-      </div>
-    </nav>
-    
+  <!--Navbar-->
   <!--style="background-color: #2c3333;"" -->
-  <!--<nav class="navbar navbar-expand-lg" data-bs-theme="dark" style="background-image: url('images/bg.png')">
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
     <div class="container-fluid">
-      <a class="navbar-brand" href="#">
-        <img src="images/logociphercolor.png" width="75" height="75" class="d-inline-block align-top" alt="Bootstrap" loading="lazy">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logociphercolor.png" width="75" height="75" class="d-inline-block align-top" alt="Bootstrap"
+          loading="lazy">
       </a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
+      <div class="ms-5 text-warning" id="weather-info"></div>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link active" aria-current="page" href="index.html">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="weather.html">Weather</a>
-          </li>          
+            <a class="nav-link" href="#">News</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tech</a>
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="about.html">About</a>
-          </li> 
+          </li>
           <li class="nav-item">
             <a class="nav-link" href="contact.html">Contact</a>
-          </li> 
+          </li>
         </ul>
         <form class="d-flex" role="search">
           <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
@@ -86,40 +55,42 @@
         </form>
       </div>
     </div>
-  </nav>-->
+  </nav>
 
-  <!--Mews Container-->
-      <div class="container mt-4">
-        <div class="row">
-            <div id="newsResults"></div>
-        </div>
-        <div id="loader">
-            <div class="progress">
-                <div></div>
-            </div>
+  <!--News Content Card-->
+  <div class="container">
+    <h1>Welcome to News App (<span id="resultCount"></span> Results)</h1>
+    <div class="row content">
+      <div class="card my-4 mx-2 w-75" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Go somewhere</a>
         </div>
       </div>
+    </div>
+    <div class="d-flex justify-content-around">
+      <button class="btn btn-primary">
+        < Previous Page</button>
+          <button class="btn btn-primary">Next Page ></button>
+    </div>
+  </div>
 
-<!--Blog: Tech News-->
-<div class="container">
-  <section>
-    <h2 class="mb-4">Latest in Tech News</h2>
-    <div id="news-content" class="row"></div>
-  </section>
-</div>
 
-<!--Footer Section-->
+  <!--Footer Section-->
   <footer id="footer" class="footer">
     <div class="container">
       <div class="row gy-3">
         <div class="col-lg-3 col-md-3 d-flex">
-          
+
           <div>
-            <h4 class="text-center">Location</h4>
+            <h4>LOCATION</h4>
             <p>
               18th Floor, W Fifth, 5th Avenue,<br>
-               Taguig, 1630 Metro Manila
-            
+              Taguig, 1630 Metro Manila
+
             </p>
           </div>
 
@@ -127,10 +98,18 @@
 
         <div class="col-lg-2 col-md-6 footer-links d-flex">
           <!--<i class="bi bi-telephone icon"></i> -->
-          <div>                   
-            <a class="nav-link text-white" href="about.html"><h4>About</h4></a>
-            <a class="nav-link text-white" href="about.html"><p>Mission</p></h4></a>                      
-            <a class="nav-link text-white" href="about.html"><p>The Team</p></h4></a>
+          <div>
+            <a class="nav-link text-white" href="about.html">
+              <h4>ABOUT</h4>
+            </a>
+            <a class="nav-link text-white" href="about.html">
+              <p>Mission</p>
+              </h4>
+            </a>
+            <a class="nav-link text-white" href="about.html">
+              <p>The Team</p>
+              </h4>
+            </a>
             </p>
           </div>
         </div>
@@ -138,12 +117,12 @@
         <div class="col-lg-2 col-md-6 footer-links d-flex">
           <!--<i class="bi bi-clock icon"></i>-->
           <div>
-            <h4>Sports</h4>
+            <h4>SPORTS</h4>
             <p>
               FIFA<br>
               NBA<br>
               MMA<br>
-             <br>
+              <br>
             </p>
           </div>
         </div>
@@ -151,18 +130,18 @@
         <div class="col-lg-2 col-md-6 footer-links d-flex">
           <!--<i class="bi bi-clock icon"></i>-->
           <div>
-            <h4 class="text-center">Finance</h4>
+            <h4>FINANCIAL</h4>
             <p>
               Bitcoin<br>
               Philippine Stocks<br>
-              Forex Trading<br>              
+              Forex Trading<br>
             </p>
           </div>
         </div>
 
         <div class="col-lg-3 col-md-4 footer-links">
-          <h4 class="text-center">Follow Us</h4>
-          <div class="social-links d-flex justify-content-evenly">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
             <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
@@ -176,16 +155,58 @@
     <div class="container">
       <div class="copyright">
         © Copyright <strong><span>Cipher 5 News Online</span></strong>
-      </div>             
+      </div>
     </div>
 
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
   <script src="jquery-3.6.4.min.js"></script>
-  <script src="js/main.js"></script>
-  <script src="js/tech.js"></script>
   <script src="js/weather.js"></script>
   <script src="js/navweather.js"></script>
+
+  <script>
+    const fetchNews = async (page, q) => {
+      console.log("Fetching news...");
+
+      var url = 'https://newsapi.org/v2/everything?' +
+        'q=' +q+
+        '&from=2023-03-20&' +
+        'pageSize=20&' +
+        'language=en&' +
+        'page=' +page+
+        '&sortBy=popularity&' +
+        'apiKey=dd574e318ab64195bc2ad9300cbfda7f';
+
+      var req = new Request(url);
+
+      //  let a = await fetch(req)
+      //  let response = await a.json()
+      //  console.log(response) 
+      //  console.log(JSON.stringify(Response))
+      let response = { "status": "ok", "totalResults": 4213, "articles": [{ "source": { "id": "engadget", "name": "Engadget" }, "author": "Jon Fingas", "title": "8BitDo controllers now work with Apple devices", "description": "You no longer need to pass on 8BitDo's gamepads if you use Apple products. 8BitDo has confirmed that its controllers now officially support iPhones, iPads and Macs thanks to both firmware upgrades and Apple's recent iOS 16.3, iPadOS 16.3, tvOS 16.3 and macOS …", "url": "https://www.engadget.com/8bitdo-controllers-now-work-with-apple-devices-163657954.html", "urlToImage": "https://s.yimg.com/uu/api/res/1.2/ekLqo_VW4Z9CPYD1CjRT2A--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-03/b7e1d4c0-c738-11ed-bbf0-5c28c6d322eb.cf.jpg", "publishedAt": "2023-03-20T16:36:57Z", "content": "You no longer need to pass on 8BitDo's gamepads if you use Apple products. 8BitDo has confirmed that its controllers now officially support iPhones, iPads and Macs thanks to both firmware upgrades an… [+1007 chars]" }, { "source": { "id": null, "name": "Gizmodo.com" }, "author": "Kyle Barr", "title": "Apple's Delaying Products, Avoiding AI in Desperate Bid to Avoid Layoffs", "description": "Apple does not want to resort to layoffs, unlike many other major tech companies, which have been downsizing since around the turn of 2023. The tech giant is so desperate to not become another Google, Microsoft, or Meta (which thought 11,000 Meta staff layoff…", "url": "https://gizmodo.com/apple-ai-siri-chatgpt-homepod-screen-layoffs-delays-1850243150", "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/cf97adab98c4818fc984c06206ea548a.jpg", "publishedAt": "2023-03-20T15:45:00Z", "content": "Apple does not want to resort to layoffs, unlike many other major tech companies, which have been downsizing since around the turn of 2023. The tech giant is so desperate to not become another Google… [+3466 chars]" }, { "source": { "id": "engadget", "name": "Engadget" }, "author": "Steve Dent", "title": "Apple's 10.9-inch iPad is $50 off right now", "description": "Apple's 10.9-inch 2022 iPads are improved in almost every way, including the design, performance, battery life, front facing camera and more. One of the biggest knocks is the price, so if you've been holding out for a deal, Amazon now has them on sale at pric…", "url": "https://www.engadget.com/apples-109-inch-ipad-is-50-off-right-now-093646112.html", "urlToImage": "https://s.yimg.com/uu/api/res/1.2/4CERia6vS1JTBI5TsoiBXw--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-03/aed7e570-c7c6-11ed-9efe-49fac361b443.cf.jpg", "publishedAt": "2023-03-21T09:36:46Z", "content": "All products recommended by Engadget are selected by our editorial team, independent of our parent company. Some of our stories include affiliate links. If you buy something through one of these link… [+1433 chars]" }, { "source": { "id": "engadget", "name": "Engadget" }, "author": "Igor Bonifacic", "title": "Xbox head says Microsoft's mobile game store could arrive next year", "description": "Microsoft is preparing to launch an Xbox store on iOS and Android as early as next year, according to Phil Spencer. The head of the company’s gaming division shared the timeline in a Financial Times\r\n interview published on Monday, noting the plan is dependen…", "url": "https://www.engadget.com/xbox-head-says-microsofts-mobile-game-store-could-arrive-next-year-180007168.html", "urlToImage": "https://s.yimg.com/uu/api/res/1.2/swJUeV23gSs6Nmc_oi1N7w--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2021-08/9f593830-f926-11eb-bfe7-b8254f7b93c1.cf.jpg", "publishedAt": "2023-03-20T18:00:07Z", "content": "Microsoft is preparing to launch an Xbox store on iOS and Android as early as next year, according to Phil Spencer. The head of the companys gaming division shared the timeline in a Financial Times\r\n… [+1859 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Pay Launches in South Korea", "description": "After a years-long wait, Apple Pay today launched in South Korea, allowing those living in the country to use Apple's payment system to make contactless payments using the iPhone or Apple Watch.\n\n\n\n\n\nApple has been working to bring ‌Apple Pay‌ to South Korea …", "url": "https://www.macrumors.com/2023/03/20/apple-pay-south-korea/", "urlToImage": "https://images.macrumors.com/t/3AafKQrSjReo-42sG45rd9to9SU=/2500x/article-new/2021/07/Apple-Pay-Feature.jpg", "publishedAt": "2023-03-20T20:52:34Z", "content": "After a years-long wait, Apple Pay today launched in South Korea, allowing those living in the country to use Apple's payment system to make contactless payments using the iPhone or Apple Watch.\r\nApp… [+1156 chars]" }, { "source": { "id": null, "name": "Gizmodo.com" }, "author": "Florence Ion", "title": "Apple's iPhone 15 Pro May Ditch Physical Volume and Mute Buttons", "description": "We won’t know anything for sure about the iPhone 15 until it’s launched later this year, but we’re expecting big changes. We’ve already mentioned it in our iPhone 15 rumor roundup, but this year’s Pro models may ditch physical buttons for touch-based buttons …", "url": "https://gizmodo.com/apple-iphone-15-touch-buttons-taptic-volume-mute-pro-ma-1850244813", "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/347c8c2e3bc8e28ee81ce15bbd249555.jpg", "publishedAt": "2023-03-20T20:10:00Z", "content": "We wont know anything for sure about the iPhone 15 until its launched later this year, but were expecting big changes. Weve already mentioned it in our iPhone 15 rumor roundup, but this years Pro mod… [+2161 chars]" }, { "source": { "id": null, "name": "Gizmodo.com" }, "author": "Mack DeGeurin", "title": "If You Are a Russian Diplomat, You Should Be Using a Fliphone", "description": "While governments around the world are racing to place restrictions on TikTok over perceived espionage and security concerns, Kremlin leaders in Moscow have their sights set on another target: smartphones. The officials, according to Russian newspaper Kommers…", "url": "https://gizmodo.com/iphone-russian-diplomat-kremlin-putin-use-flip-phones-1850243229", "urlToImage": "https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/287ff4aa016e2fef3462ac218030c990.jpg", "publishedAt": "2023-03-20T15:41:54Z", "content": "While governments around the world are racing to place restrictions on TikTok over perceived espionage and security concerns, Kremlin leaders in Moscow have their sights set on another target: smartp… [+2869 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Working on Beats Studio Buds+ Earphones", "description": "Apple is developing a new version of the Beats Studio Buds called the Beats Studio Buds+, signs of which were discovered in the iOS 16.4 release candidate today by 9to5Mac.\n\n\n\nImage via 9to5Mac\r\n\n\nThe Beats Studio Buds+ look similar to the Beats Studio Buds t…", "url": "https://www.macrumors.com/2023/03/21/beats-studio-buds-plus/", "urlToImage": "https://images.macrumors.com/t/5goUdoZqPhQbp2RjqqvuhLLjyeI=/1600x/article-new/2023/03/beats-studio-buds-plus.jpg", "publishedAt": "2023-03-21T19:05:31Z", "content": "Apple is developing a new version of the Beats Studio Buds called the Beats Studio Buds+, signs of which were discovered in the iOS 16.4 release candidate today by 9to5Mac.\r\nThe Beats Studio Buds+ lo… [+650 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "8BitDo Gaming Controllers Now Compatible With iPhone, iPad, Apple TV and Mac", "description": "A selection of controllers from gaming company 8BitDo are now compatible with Apple's product lineup, thanks to a firmware update that was released today.\n\n\n\n\r\n\n\nThe 8BitDo SN30 Pro for Android, SN30 Pro, Pro+, Pro 2, Ultimate 2.4g and Lite SE can be used wit…", "url": "https://www.macrumors.com/2023/03/20/8bitdo-controllers-apple-devices/", "urlToImage": "https://images.macrumors.com/t/hgXOzhgJTe0t5Mm5p-XeG--58JU=/2000x/article-new/2023/03/8bitdo-controllers-apple-support.jpg", "publishedAt": "2023-03-20T22:34:01Z", "content": "A selection of controllers from gaming company 8BitDo are now compatible with Apple's product lineup, thanks to a firmware update that was released today.\r\nThe 8BitDo SN30 Pro for Android, SN30 Pro, … [+1000 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Tim Hardwick", "title": "Apple's Flagship Mumbai Store to Open in April, Followed by Second Store in New Delhi", "description": "Apple will open its flagship India retail store in Mumbai next month, after several delays, soon to be followed by another store in New Delhi, reports The Economic Times, citing industry executives.\n\n\n\n\n\nLocated in the Jim World Drive mall and covering 22,000…", "url": "https://www.macrumors.com/2023/03/20/apple-mumbai-store-opening-april/", "urlToImage": "https://images.macrumors.com/t/yQIJcb8Y-avkal6pF9GMKjehEcY=/2304x/article-new/2020/08/apple-india.jpg", "publishedAt": "2023-03-20T12:17:02Z", "content": "Apple will open its flagship India retail store in Mumbai next month, after several delays, soon to be followed by another store in New Delhi, reports The Economic Times, citing industry executives.\r… [+1800 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Seeds Release Candidate Version of tvOS 16.4 to Developers", "description": "Apple today seeded the release candidate version of an upcoming tvOS 16.4 update to developers for testing purposes, with the update coming a week after the launch of the fourth tvOS 16.4 beta.\n\n\n\n\n\nRegistered developers are able to download the tvOS 16.4 upd…", "url": "https://www.macrumors.com/2023/03/21/apple-seeds-tvos-16-4-release-candidate/", "urlToImage": "https://images.macrumors.com/t/6gz7t5tbqOJ-rFRIaNhdHKUzrUI=/2500x/article-new/2022/10/Apple-TV-2022-Feature-Orange.jpg", "publishedAt": "2023-03-21T17:14:00Z", "content": "Apple today seeded the release candidate version of an upcoming tvOS 16.4 update to developers for testing purposes, with the update coming a week after the launch of the fourth tvOS 16.4 beta.\r\nRegi… [+730 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Seeds Studio Display 16.4 Firmware Release Candidate", "description": "Alongside the macOS 13.3 release candidate that came out today, Apple has provided a beta of new 16.4 firmware release candidate that's designed for the Studio Display.\n\n\n\n\n\nAll Studio Display models are able to receive over-the-air firmware updates, but this…", "url": "https://www.macrumors.com/2023/03/21/apple-studio-display-16-4-rc/", "urlToImage": "https://images.macrumors.com/t/iXPd1H5IC6TMnWWuRHItlsBuG4g=/2250x/article-new/2022/03/apple-studio-display-blue.jpg", "publishedAt": "2023-03-21T17:22:00Z", "content": "Alongside the macOS 13.3 release candidate that came out today, Apple has provided a beta of new 16.4 firmware release candidate that's designed for the Studio Display.\r\nAll Studio Display models are… [+415 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Seeds Release Candidate Version of watchOS 9.4 to Developers", "description": "Apple today seeded the release candidate version of an upcoming watchOS 9.4 update to developers for testing purposes, with the software update coming one week after launch of the fourth beta.\n\n\n\n\n\nTo install the watchOS 9.4 update, developers will need to do…", "url": "https://www.macrumors.com/2023/03/21/apple-seeds-watchos-9-4-release-candidate/", "urlToImage": "https://images.macrumors.com/t/eXhNHYXbNppBslGlpQBfxwVlS6g=/2250x/article-new/2022/06/Apple-watchOS-9-Feature.jpg", "publishedAt": "2023-03-21T17:20:00Z", "content": "Apple today seeded the release candidate version of an upcoming watchOS 9.4 update to developers for testing purposes, with the software update coming one week after launch of the fourth beta.\r\nTo in… [+971 chars]" }, { "source": { "id": null, "name": "Slashdot.org" }, "author": "msmash", "title": "Microsoft Plans Mobile Games Store To Rival Apple and Google", "description": "Microsoft is preparing to launch a new app store for games on iPhones and Android smartphones as soon as next year if its $75bn acquisition of Activision Blizzard is cleared by regulators, according to the head of its Xbox business. From a report: New rules r…", "url": "https://apple.slashdot.org/story/23/03/20/0541237/microsoft-plans-mobile-games-store-to-rival-apple-and-google", "urlToImage": "https://a.fsdn.com/sd/topics/microsoft_64100.png", "publishedAt": "2023-03-20T15:20:00Z", "content": "New rules requiring Apple and Google to open up their mobile platforms to app stores owned and operated by other companies are expected to come into force from March 2024 under the EU's Digital Marke… [+1426 chars]" }, { "source": { "id": null, "name": "CNET" }, "author": "Max McHone", "title": "This Slim Eufy SmartTrack Card Is $10 Off for Prime Members - CNET", "description": "This SmartTrack Card can help you track down your wallet anywhere (as long as you're an Apple user), and right now it's on sale for just $20.", "url": "https://www.cnet.com/deals/this-slim-eufy-smarttrack-card-is-10-off-for-prime-members/", "urlToImage": "https://www.cnet.com/a/img/resize/ce1c2c7e834080beac951ba0fe7805004fb9edd4/hub/2023/03/21/ad18ae6a-dcbb-4f1d-a53e-97e281fa7395/eufy-security-smarttrack-card.jpg?auto=webp&fit=crop&height=630&width=1200", "publishedAt": "2023-03-21T13:33:00Z", "content": "There's nothing worse than that sinking feeling you get when you pat down your pockets and realize you have no idea where you left your wallet. But there's an easier way to track it down than retraci… [+1244 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Tim Hardwick", "title": "Kuo: iPhone 15 MFi Requirements Expected to Boost Apple USB-C Charger Shipments", "description": "Apple's upcoming iPhone 15 series will include support for faster charging speeds when used with MFi-certified USB-C chargers, including its own 20W Power Adapter, according to the latest research note from Apple industry analyst Ming-Chi Kuo.\n\n\n\n\n\nThis year,…", "url": "https://www.macrumors.com/2023/03/21/kuo-iphone-usb-c-faster-charging-speeds/", "urlToImage": "https://images.macrumors.com/t/jXiRSm8BPOyIaEk01TgscO6qTfQ=/1600x/article-new/2020/06/20wvchargerfeature.jpg", "publishedAt": "2023-03-21T09:23:57Z", "content": "Apple's upcoming iPhone 15 series will include support for faster charging speeds when used with MFi-certified USB-C chargers, including its own 20W Power Adapter, according to the latest research no… [+2391 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Tim Hardwick", "title": "Apple's HomePod With a Screen Delayed Until Next Year at the Earliest", "description": "Apple's project to design its first HomePod with a screen has been pushed back until next year at the earliest, as part of a series of cost-cutting measures and belt-tightening efforts to make its operations more efficient.\n\n\n\n\n\nIn his latest Power On newslet…", "url": "https://www.macrumors.com/2023/03/20/homepod-with-screen-delayed-next-year/", "urlToImage": "https://images.macrumors.com/t/ygkHtLXG3Ezp-6anw0erdUmeKww=/1920x/article-new/2022/01/HomePod-With-Screen.jpg", "publishedAt": "2023-03-20T10:57:38Z", "content": "Apple's project to design its first HomePod with a screen has been pushed back until next year at the earliest, as part of a series of cost-cutting measures and belt-tightening efforts to make its op… [+1267 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Seeds Release Candidate Version of macOS Ventura 13.3 to Developers", "description": "Apple today seeded the release candidate version of macOS Ventura 13.3 to developers for testing purposes, with the new software update coming a week after the release of the fourth macOS 13.3 beta.\n\n\n\n\n\nRegistered developers can download the beta through the…", "url": "https://www.macrumors.com/2023/03/21/apple-seeds-macos-ventura-13-3-release-candidate/", "urlToImage": "https://images.macrumors.com/t/eBS_h-Lk56iVeWn15XorBq81kx0=/2500x/article-new/2022/06/Ventura-Macs-Feature-Yellow.jpg", "publishedAt": "2023-03-21T17:36:33Z", "content": "Apple today seeded the release candidate version of macOS Ventura 13.3 to developers for testing purposes, with the new software update coming a week after the release of the fourth macOS 13.3 beta.\r… [+625 chars]" }, { "source": { "id": null, "name": "MacRumors" }, "author": "Juli Clover", "title": "Apple Seeds Release Candidate Versions of iOS 16.4 and iPadOS 16.4 to Developers", "description": "Apple today seeded the release candidate versions of upcoming iOS 16.4 and iPadOS 16.4 updates to developers for testing purposes, with the software coming a week after the launch of the fourth betas. The RCs mark the final version of the software that will b…", "url": "https://www.macrumors.com/2023/03/21/apple-seeds-ios-16-4-release-candidate/", "urlToImage": "https://images.macrumors.com/t/mt1kwn7UjOEMNYSkdncH_m6xVjw=/2500x/article-new/2023/01/iOS-16.4-Feature-Blue.jpg", "publishedAt": "2023-03-21T17:25:41Z", "content": "Apple today seeded the release candidate versions of upcoming iOS 16.4 and iPadOS 16.4 updates to developers for testing purposes, with the software coming a week after the launch of the fourth betas… [+2484 chars]" }, { "source": { "id": "polygon", "name": "Polygon" }, "author": "Alice Newcome-Beill", "title": "Some 8BitDo controllers now work with iPhone, iPad, Mac, and Apple TV", "description": "The latest firmware update for 8BitDo’s most popular controllers extends their compatibility to Apple iPhone, iPad, Mac, and Apple TV devices running the most recent software update.", "url": "https://www.polygon.com/23648539/8bitdo-controller-apple-ios-ipad-support-update", "urlToImage": "https://cdn.vox-cdn.com/thumbor/ClQ9PWuCJwKDgKwIHXAl_xcniCk=/0x196:2560x1536/fit-in/1200x630/cdn.vox-cdn.com/uploads/chorus_asset/file/24522969/8._Pro_2___iPad.jpg", "publishedAt": "2023-03-20T18:08:17Z", "content": "8BitDo released a new firmware update for several of its wireless controllers that adds compatibility with iPhones, iPads, Apple TV hardware, and Mac computers that are running their latest software … [+910 chars]" }] }
+
+      console.log(response)
+
+      let str = ""
+      resultCount.innerHTML = response.totalResults
+      for (let item of response.articles) {
+        str = str + ` <div class="card my-4 mx-2" style="width: 18rem;">
+         <img src="${item.urlToImage}" class="card-img-top" alt="...">
+        <div class="card-body">
+         <h5 class="card-title">${item.title.slice(0,20)}</h5>
+         <p class="card-text">${item.description.slice(0,75)}</p>
+         <a href="${item.url}" target="_blank" class="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>`
+      }
+      document.querySelector(".content").innerHTML = str
+    }
+    fetchNews(1)     
+  </script>
 </body>
+
 </html>
