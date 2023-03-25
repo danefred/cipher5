@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Cipher5 News | Weather | Sports | Lifestyle | Technology | Business</title>
+
+  <!--CSS-->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+  <link href="bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="newsfred.css" rel="stylesheet">
+
+</head>
+
+<body>
+  <!--Navbar-->
+  <!--style="background-color: #2c3333;"" -->
+  <nav class="navbar navbar-expand-lg" data-bs-theme="dark">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/logociphercolor.png" width="75" height="75" class="d-inline-block align-top" alt="Bootstrap"
+          loading="lazy">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="ms-5 text-warning" id="weather-info"></div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="weather.html">Weather</a>
+          </li>                 
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">Contact</a>
+          </li>
+        </ul>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </nav>
+
+  <!--News Content Card-->
+  <div class="container">
+    <h1>Sports Article (<span id="resultCount"></span> Results)</h1>
+    <div class="row content">
+      <div class="card my-4 mx-2 w-75" style="width: 18rem;">
+        <img src="..." class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+          <a href="#" class="btn btn-primary">Read More</a>
+        </div>
+      </div>
+    </div>
+  <!--  <div class="d-flex justify-content-around">
+      <button class="btn btn-primary">
+        < Previous Page</button>
+          <button class="btn btn-primary">Next Page ></button>
+    </div> -->
+  </div>
+
+
+  <!--Footer Section-->
+  <footer id="footer" class="footer">
+    <div class="container">
+      <div class="row gy-3">
+        <div class="col-lg-3 col-md-3 d-flex">
+
+          <div>
+            <h4>LOCATION</h4>
+            <p>
+              18th Floor, W Fifth, 5th Avenue,<br>
+              Taguig, 1630 Metro Manila
+
+            </p>
+          </div>
+
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links d-flex">
+          <!--<i class="bi bi-telephone icon"></i> -->
+          <div>
+            <a class="nav-link text-white" href="about.html">
+              <h4>ABOUT</h4>
+            </a>
+            <a class="nav-link text-white" href="about.html">
+              <p>Mission</p>
+              </h4>
+            </a>
+            <a class="nav-link text-white" href="about.html">
+              <p>The Team</p>
+              </h4>
+            </a>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links d-flex">
+          <!--<i class="bi bi-clock icon"></i>-->
+          <div>
+            <h4><a class="nav-link text-white" href="sports.html">SPORTS</a></h4>
+            <p>
+              FIFA<br>
+              NBA<br>
+              MMA<br>
+              <br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-6 footer-links d-flex">
+          <!--<i class="bi bi-clock icon"></i>-->
+          <div>
+            <h4>FINANCIAL</h4>
+            <p>
+              Bitcoin<br>
+              Philippine Stocks<br>
+              Forex Trading<br>
+            </p>
+          </div>
+        </div>
+
+        <div class="col-lg-3 col-md-4 footer-links">
+          <h4>Follow Us</h4>
+          <div class="social-links d-flex">
+            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="copyright">
+        © Copyright <strong><span>Cipher 5 News Online</span></strong>
+      </div>
+    </div>
+
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+    crossorigin="anonymous"></script>
+
+  <script src="jquery-3.6.4.min.js"></script>
+  <script src="js/weather.js"></script>
+  <script src="js/navweather.js"></script>
+
+  <script>
+    const fetchNews = async (page, q) => {
+      console.log("Fetching news...");
+
+      var url = 'https://newsapi.org/v2/everything?' +
+        'q=' +q+
+        '&from=2023-03-20&' +
+        'pageSize=20&' +
+        'language=en&' +
+        'page=' +page+
+        '&sortBy=popularity&' +
+        'apiKey=dd574e318ab64195bc2ad9300cbfda7f';
+
+      var req = new Request(url);
+
+      //  let a = await fetch(req)
+      //  let response = await a.json()
+      //  console.log(response) 
+      //  console.log(JSON.stringify(Response))
+      let response = {"status":"ok","totalResults":7130,"articles":[{"source":{"id":"engadget","name":"Engadget"},"author":"Amy Skorheim","title":"The best live TV streaming services in 2023","description":"Streaming promised us a world without cable contracts and the satisfaction of only paying for what we actually wanted to watch. But at what cost? Cutting the cord typically means you don’t get to watch local channels, live sports or certain “cable only” netwo…","url":"https://www.engadget.com/best-live-tv-streaming-service-133000410.html","urlToImage":"https://s.yimg.com/uu/api/res/1.2/4Tmlls4B2YixkEkg7SsJpg--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-03/e273db60-c41e-11ed-b0b9-11abb4ff0877.cf.jpg","publishedAt":"2023-03-21T13:30:00Z","content":"All products recommended by Engadget are selected by our editorial team, independent of our parent company. Some of our stories include affiliate links. If you buy something through one of these link… [+23817 chars]"},{"source":{"id":"engadget","name":"Engadget"},"author":"Sarah Fielding","title":"Amazon's palm-reading tech is being tested in Panera cafes","description":"Amazon One's palm-reading technology that can substitute for credit cards and tickets is now available for Panera customers. With this new partnership, the fast casual chain becomes the first national restaurant to let diners use their palm for payments and l…","url":"https://www.engadget.com/amazons-palm-reading-tech-tested-panera-cafes-133037398.html","urlToImage":"https://s.yimg.com/uu/api/res/1.2/8Emiu8ebkpmt8FK66lV7mQ--~B/Zmk9ZmlsbDtoPTYzMDtweW9mZj0wO3c9MTIwMDthcHBpZD15dGFjaHlvbg--/https://media-mbst-pub-ue1.s3.amazonaws.com/creatr-uploaded-images/2023-03/bbb9e710-c8b2-11ed-bf8f-994259819434.cf.jpg","publishedAt":"2023-03-22T13:30:37Z","content":"Amazon One's palm-reading technology that can substitute for credit cards and tickets is now available for Panera customers. With this new partnership, the fast casual chain becomes the first nationa… [+1390 chars]"},{"source":{"id":null,"name":"Gizmodo.com"},"author":"Kyle Barr","title":"Panera Bread Is Letting Customers Pay With Amazon’s Palm Reading Tech","description":"Panera Bread isn’t telling its legion of customers to shove their hand directly into their broccoli and cheese bread bowl, but a few Missouri franchisees are letting their customers know they can throw their palm onto the kiosk to pay for their meal. It’s not…","url":"https://gizmodo.com/panera-amazon-one-palm-reading-tech-biometric-data-1850251557","urlToImage":"https://i.kinja-img.com/gawker-media/image/upload/c_fill,f_auto,fl_progressive,g_center,h_675,pg_1,q_80,w_1200/03ebaf34846209b8c45152411cdc2449.jpg","publishedAt":"2023-03-22T14:10:00Z","content":"Panera Bread isnt telling its legion of customers to shove their hand directly into their broccoli and cheese bread bowl, but a few Missouri franchisees are letting their customers know they can thro… [+2545 chars]"},{"source":{"id":"cnn","name":"CNN"},"author":"Lisa Respers France","title":"Shaquille O'Neal shares reason for his hospitalization","description":"Shaquille O'Neal's followers were worried when they saw on social media that he was in a hospital bed.","url":"https://www.cnn.com/2023/03/21/entertainment/shaquille-oneal-surgery/index.html","urlToImage":"https://media.cnn.com/api/v1/images/stellar/prod/230321130340-shaquille-oneal-021223.jpg?c=16x9&q=w_800,c_fill","publishedAt":"2023-03-21T13:32:14Z","content":"Shaquille ONeals followers were worried when they saw on social media that he was in a hospital bed.\r\nNow the basketball star and game analyst has explained what has been going on with some light hum… [+653 chars]"},{"source":{"id":"cnn","name":"CNN"},"author":"Thomas Schlachter","title":"World Baseball Classic final: All you need to know ahead of USA vs Japan","description":"The World Baseball Classic will reach its conclusion when Team USA takes on Japan in what should be an epic championship game to decide who takes home the WBC crown.","url":"https://www.cnn.com/2023/03/21/sport/world-baseball-classic-final-usa-japan-spt-intl/index.html","urlToImage":"https://media.cnn.com/api/v1/images/stellar/prod/230321150319-02-usa-japan-world-baseball-classic-final.jpg?c=16x9&q=w_800,c_fill","publishedAt":"2023-03-21T16:56:32Z","content":"The World Baseball Classic will reach its conclusion when Team USA takes on Japan in what should be an epic championship game to decide who takes home the WBC crown.\r\nBoth teams have impressed throug… [+2303 chars]"},{"source":{"id":"cnn","name":"CNN"},"author":"Nathaniel Meyersohn","title":"Bed Bath & Beyond is closing hundreds of stores. But they won't be empty for long","description":"• The way Google handled layoffs stunned many \n• Live updates: Global stocks rise as investor worries about global banking turmoil ease \n• Five questions for the Federal Reserve as the banking crisis drags on","url":"https://www.cnn.com/2023/03/21/business/bed-bath-beyond-stores-closing-real-estate/index.html","urlToImage":"https://media.cnn.com/api/v1/images/stellar/prod/230320130753-bed-bath-beyond-store-closing-0208.jpg?c=16x9&q=w_800,c_fill","publishedAt":"2023-03-21T10:45:40Z","content":"Bed Bath &amp; Beyond is stripping down its big blue signs, clearing out aisles of linens and closing 400 stores as it tries to stave off bankruptcy.\r\nAlready, chains including TJ Maxx, HomeGoods and… [+4644 chars]"},{"source":{"id":"ars-technica","name":"Ars Technica"},"author":"Ars Staff","title":"The Genesis GV70 Electrified humbly sticks to its strengths","description":"With its latest, Genesis is one step closer to putting ICE in its rearview mirror.","url":"https://arstechnica.com/cars/2023/03/the-genesis-gv70-electrified-humbly-sticks-to-its-strengths/","urlToImage":"https://cdn.arstechnica.net/wp-content/uploads/2023/03/IMG_1771-760x380.jpg","publishedAt":"2023-03-21T13:00:05Z","content":"25 with \r\nGenesis provided flights from New York City to Atlanta and back, plus two nights in a hotel so we could drive the new GV70 Electrified. Ars does not accept paid editorial content.\r\nIt's apt… [+4736 chars]"},{"source":{"id":null,"name":"Android Central"},"author":"derrek.lee@futurenet.com (Derrek Lee)","title":"The new Amazfit T-Rex Ultra is the ultimate rugged smartwatch","description":"The new Amazfit T-Rex Ultra is built to endure with a tough stainless steel chassis and military-grade durability.","url":"https://www.androidcentral.com/wearables/amazfit-t-rex-ultra-launch","urlToImage":"https://cdn.mos.cms.futurecdn.net/s2Z9GWWSRDdRnjASrBTMRB-1200-80.jpg","publishedAt":"2023-03-23T22:38:58Z","content":"<ul><li>Amazfit has just launched the new T-Rex Ultra smartwatch.</li><li>The T-Rex Ultra features a durable design built with stainless steel and a mud-resistant chassis.</li><li>The watch can withs… [+2243 chars]"},{"source":{"id":null,"name":"Android Central"},"author":"tips@androidcentral.com (Vishnu Sarangapurkar)","title":"OPPO Find X6 Pro features a great-looking design to take on Galaxy S23 series","description":"OPPO has made the Find X6 series official in China with two models, the Find X6 Pro and the Find X6.","url":"https://www.androidcentral.com/phones/oppo-find-x6-pro-find-x6-launch","urlToImage":"https://cdn.mos.cms.futurecdn.net/cP5NFXKsd9rjGXudNLQvjM-1200-80.jpg","publishedAt":"2023-03-21T13:08:05Z","content":"What you need to know\r\n<ul><li>OPPO announces Find X6 series in China.</li><li>The Find X6 Pro and the Find X6 have a new design and share similarities.</li><li>They come with triple 50MP cameras, an… [+4223 chars]"},{"source":{"id":null,"name":"Android Central"},"author":"christinep2424@gmail.com (Christine Persaud)","title":"How to create recurring to-dos in Google Tasks","description":"Keep on top of your personal and professional calendars and to-do lists with Google Tasks and the recurring to-dos feature that's really easy to use.","url":"https://www.androidcentral.com/apps-software/how-to-create-recurring-to-dos-in-google-tasks","urlToImage":"https://cdn.mos.cms.futurecdn.net/Wab5BXnohaayFKe2wZWSKg-1200-80.jpg","publishedAt":"2023-03-20T21:00:33Z","content":"There are tasks that you need to accomplish from time to time and others that are done on a recurring basis. The latter might include putting out the garbage every Monday night, meeting a friend for … [+2831 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Sean Ingle","title":"Time runs out for Soccer AM as Sky Sports pulls plug on programme","description":"<ul><li>Programme has been staple of Sky listings for 28 years</li><li>Staff have been told that show will end on 27 May</li></ul>Soccer AM, the TV show that initially surfed the mid-90s boom in football and lads’ mags culture before becoming a well-loved sta…","url":"https://www.theguardian.com/football/2023/mar/22/time-runs-out-for-soccer-am-as-sky-sports-pulls-plug-on-programme","urlToImage":"https://i.guim.co.uk/img/media/bf9faaa964d97aa6a25e4daea66b8790fd8b02fe/0_0_3180_1909/master/3180.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=444fb5eae71ae7d30fbdba682ce3aabc","publishedAt":"2023-03-22T13:09:33Z","content":"Soccer AM, the TV show that initially surfed the mid-90s boom in football and lads mags culture before becoming a well-loved staple of Sky Sports Saturday mornings, is to be scrapped after nearly 30 … [+2688 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Aaron Bower","title":"Wakefield Trinity chief warns rugby league at risk of going part-time again","description":"<ul><li>‘I think the game is in a big hole,’ says Michael Carter</li><li>He wants the sport to embrace plans of ‘saviour’ IMG</li></ul>One of Super League’s longest-serving chief executives has warned that rugby league risks reverting to a part-time sport if …","url":"https://www.theguardian.com/sport/2023/mar/22/rugby-league-could-go-part-time-again-warns-wakefield-trinity-chief-executive","urlToImage":"https://i.guim.co.uk/img/media/1e077be13f6d51d6147af829376cf598625091a1/0_203_3500_2100/master/3500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=b1443eb1d51501e64a5b03e026aff922","publishedAt":"2023-03-22T15:22:45Z","content":"One of Super Leagues longest-serving chief executives has warned that rugby league risks reverting to a part-time sport if there are not major and systemic changes made to the game away from the fiel… [+2889 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Simon Usborne","title":"The improbable rise of landlord influencers: ‘I’m not taking advantage of anybody’","description":"Buy-to-let property videos are increasingly popular on TikTok and other social media platforms. But is this a route to financial freedom or a get-rich-quick scheme doomed to fail?James Coupland started his Instagram account more than 10 years ago, posting unr…","url":"https://www.theguardian.com/media/2023/mar/21/the-improbable-rise-of-landlord-influencers","urlToImage":"https://i.guim.co.uk/img/media/3c95c59fdd4370e570e124bb1de934fafc78f52a/142_1748_2276_1366/master/2276.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=6632980a9fbf5e9b26a39694af183c08","publishedAt":"2023-03-21T06:00:07Z","content":"James Coupland started his Instagram account more than 10 years ago, posting unremarkable photos showing him with his mates, or in the gym. After giving up on a career as a footballer, he was studyin… [+12075 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Hunter Felt","title":"The Yankees are worth $6bn: why won’t they pay $9 for their players wifi?","description":"The Bronx Bombers’ cheapness will be seen by many as another sign that the franchise remains trapped in the glory days of its pastYou would think that playing for the most valuable franchise in baseball would come with all the perks, but that turns out not to…","url":"https://www.theguardian.com/sport/2023/mar/21/the-yankees-are-worth-6bn-why-wont-they-pay-9-for-their-players-wifi","urlToImage":"https://i.guim.co.uk/img/media/340e2a8feffcfaebee224085ea5917b34298407f/0_128_4965_2979/master/4965.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=46a3ccb49d4059efadfba6aeb10d57c1","publishedAt":"2023-03-21T08:00:08Z","content":"You would think that playing for the most valuable franchise in baseball would come with all the perks, but that turns out not to be true. Apparently, signing with the New York Yankees means paying f… [+5376 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Ed Aarons and Romain Molina","title":"Fifa appeals against Cas verdict on Jean-Bart because of ‘substantial flaws’","description":"<ul><li>Fifa says Cas failed ‘to evaluate key pieces of evidence’</li><li>The 75-year-old had his lifetime ban overturned by Cas</li></ul>Fifa has confirmed it has appealed against the court of arbitration for sport’s (Cas) decision to overturn its lifetime b…","url":"https://www.theguardian.com/football/2023/mar/20/fifa-appeals-cas-decision-on-jean-bart-because-of-substantial-flaws-in-verdict","urlToImage":"https://i.guim.co.uk/img/media/33d7003c0e8fa324e4785d5cb9b2ca9d78e6a7b4/162_77_2436_1461/master/2436.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=7cba548f8f88121f34520fb5313109b6","publishedAt":"2023-03-20T13:28:02Z","content":"Fifa has confirmed it has appealed against the court of arbitration for sports (Cas) decision to overturn its lifetime ban on Yves Jean-Bart, the former president of the Haitian Football Federation (… [+3631 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Jacob Steinberg in Naples","title":"England’s Declan Rice offers rebuke to ‘harsh’ Graeme Souness criticism","description":"<ul><li>Souness said Rice is only outstanding as a ball-winner</li><li>Rice replies: ‘He doesn’t watch West Ham every week’</li></ul>Declan Rice has responded to “harsh” criticism from Graeme Souness by saying that the Sky Sports pundit cannot have watched hi…","url":"https://www.theguardian.com/football/2023/mar/22/englands-declan-rice-offers-rebuke-to-harsh-graeme-souness-criticism","urlToImage":"https://i.guim.co.uk/img/media/b8afb8f9c7abce5e734bef05cd7e5f36af0b726f/249_38_3031_1818/master/3031.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=b3aaf57706d84020a8fe22f2ba6d2d15","publishedAt":"2023-03-22T22:30:39Z","content":"Declan Rice has responded to harsh criticism from Graeme Souness by saying that the Sky Sports pundit cannot have watched him much if he thinks that the England international does not do enough to be… [+3330 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Peter Bradshaw","title":"The Five Devils review – superpower sense of smell in intriguingly weird psychodrama","description":"A child’s Perfume-style ability enables her to witness emotional crises in her parents’ past, in this disquieting movieThere are some intriguing ingredients in the mix for this weird, contrived supernatural psychodrama from French director Léa Mysius; some st…","url":"https://www.theguardian.com/film/2023/mar/21/the-five-devils-review-superpower-sense-of-smell-in-intriguingly-weird-psychodrama","urlToImage":"https://i.guim.co.uk/img/media/c3b5394fdac2461d4a668a56c83f954b6c4a398c/351_0_1429_858/master/1429.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctcmV2aWV3LTIucG5n&enable=upscale&s=b1684c19e908fbd57b54fb30a4fc1f44","publishedAt":"2023-03-21T09:00:10Z","content":"There are some intriguing ingredients in the mix for this weird, contrived supernatural psychodrama from French director Léa Mysius; some strong performances too, and a genuinely stunning final image… [+1692 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Tom Dart in Houston","title":"Major League Cricket: will a $120m moonshot find success in America?","description":"Players such as Mitch Marsh, Quinton de Kock and Liam Plunkett are bringing their experience to a notoriously tough marketIt was an obvious place to launch a sporting moonshot – a cricket league that can survive and thrive in America.Last week, Space Center H…","url":"https://www.theguardian.com/sport/2023/mar/21/major-league-cricket-will-a-120m-moonshot-find-success-in-america","urlToImage":"https://i.guim.co.uk/img/media/fa33c2bfa30d80084a679e86f51f6c03a728c338/598_111_2931_1760/master/2931.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=8a9fa25c59be08fbdac77ac5e9ed3cf8","publishedAt":"2023-03-21T08:00:09Z","content":"It was an obvious place to launch a sporting moonshot a cricket league that can survive and thrive in America.\r\nLast week, Space Center Houston hosted a reveal of next-generation spacesuits for a lun… [+7344 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Sean Ingle","title":"Manchester United bid chaos leads to growing fears Glazers may not sell","description":"<ul><li>There is a concern Glazers are trying to create leverage for loan</li><li>Eyebrows raised over reports that eight bidders are involved</li></ul>Concerns are growing among some parties involved in the Manchester United sale that the Glazers could be tr…","url":"https://www.theguardian.com/football/2023/mar/23/manchester-united-bid-chaos-leads-to-growing-fears-glazers-may-not-sell","urlToImage":"https://i.guim.co.uk/img/media/06a67156aec156beda1674b0cc3632cfcca552d1/0_65_3500_2100/master/3500.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=07ab5aa5156fffb0cabc6643fb898edb","publishedAt":"2023-03-23T12:47:29Z","content":"Concerns are growing among some parties involved in the Manchester United sale that the Glazers could be trying to play them - and that instead of selling the club they are trying to push up the pric… [+2807 chars]"},{"source":{"id":null,"name":"The Guardian"},"author":"Peter Walker Political correspondent","title":"Ringfence 10% of UK health spending for preventive measures, report urges","description":"Thinktank warns ‘political short-termism’ over health is exacerbating levels of illness and inequalityGovernments should set aside 10% of health spending for preventive and public measures such as cycle lanes and anti-obesity strategies, a thinktank has said,…","url":"https://www.theguardian.com/politics/2023/mar/24/health-spending-preventive-public-measures-report","urlToImage":"https://i.guim.co.uk/img/media/fbe04cf3f33795fe2e67040d8f423dd4ca1d60a8/0_244_5023_3014/master/5023.jpg?width=1200&height=630&quality=85&auto=format&fit=crop&overlay-align=bottom%2Cleft&overlay-width=100p&overlay-base64=L2ltZy9zdGF0aWMvb3ZlcmxheXMvdGctZGVmYXVsdC5wbmc&enable=upscale&s=4f68d69dabd7f83507a5e4ae35dfc154","publishedAt":"2023-03-24T00:01:05Z","content":"Governments should set aside 10% of health spending for preventive and public measures such as cycle lanes and anti-obesity strategies, a thinktank has said, warning that political short-termism over… [+3739 chars]"}]}
+
+      console.log(response)
+
+      let str = ""
+      resultCount.innerHTML = response.totalResults
+      for (let item of response.articles) {
+        str = str + ` <div class="card my-4 mx-2" style="width: 18rem;">
+         <img src="${item.urlToImage}" class="card-img-top" alt="...">
+        <div class="card-body">
+         <h5 class="card-title">${item.title.slice(0,20)}</h5>
+         <p class="card-text">${item.description.slice(0,75)}</p>
+         <a href="${item.url}" target="_blank" class="btn btn-primary">Read More</a>
+        </div>
+      </div>`
+      }
+      document.querySelector(".content").innerHTML = str
+    }
+    fetchNews(1)     
+  </script>
+</body>
+
+</html>
